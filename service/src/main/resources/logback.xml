@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2015. 速位中国
+  -->
+
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+
+
+    <!--输出文件位置,tomcat容器的根目录-->
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!--
+                颜色可选
+                "%black", "%red", "%green","%yellow","%blue", "%magenta","%cyan", "%white", "%gray",
+                "%boldRed","%boldGreen", "%boldYellow", "%boldBlue", "%boldMagenta","%boldCyan", "%boldWhite" and "%highlight" 。
+                例:%red(信息),则 信息 这两个字为红色
+                其它 %p 表示level,%t表示线程名
+            -->
+            <pattern>
+                %green(%d{yyyy-MM-dd HH:mm:ss.SSS}) %highlight(%5p) %magenta([%15.15t]) %cyan(%-40.40logger{39}) %boldMagenta(%3.3L) %blue(:) %m%n
+            </pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+
+    <appender name="allRollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <FileNamePattern>log/all/%d{yyyy-MM-dd}.log</FileNamePattern>
+            <!-- keep 30 days' worth of history -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</Pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <appender name="serverRollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <FileNamePattern>log/server/%d{yyyy-MM-dd}.log</FileNamePattern>
+            <!-- keep 30 days' worth of history -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</Pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+
+
+    <root level="info">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="allRollingFileAppender"/>
+    </root>
+    <!--
+        <logger name="com.suweia.rank.rankservice.service" level="debug" additivity="false">
+            <appender-ref ref="stdout"/>
+            <appender-ref ref="serverRollingFileAppender"/>
+        </logger>
+        <logger name="com.suweia.rank.rankservice.service.dao" level="info" additivity="false">
+            <appender-ref ref="stdout"/>
+            <appender-ref ref="serverRollingFileAppender"/>
+        </logger>-->
+
+</configuration>
