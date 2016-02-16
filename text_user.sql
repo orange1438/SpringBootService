@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS `text_user`;
+CREATE TABLE `text_user` (
+  `USER_ID` varchar(100) NOT NULL,
+  `USERNAME` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`USER_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
