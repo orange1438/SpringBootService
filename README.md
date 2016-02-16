@@ -3,7 +3,7 @@ this is Spring Boot Service Project skeleton template.Include redis,rabbitmq,jer
 这是一个spring boot服务的框架，包括redis，mq，restful，定时器，mybabit。易扩容、易维护的架构。</br>
 
 # 快速开发的服务模版说明
-![](https://raw.githubusercontent.com/orange1438/SpringBootService/master/Frame.jpg)
+![](https://raw.githubusercontent.com/orange1438/SpringBootService/master/Frame.jpg) </br>
 1.restful,远程调用接口使用，可供前端或者其他服务调用；</br>
 2.逻辑服务层：对远程调用作逻辑处理。</br>
 3.redis：缓存系统，3.0以上版本可配置集群。</br>
