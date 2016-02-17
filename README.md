@@ -1,6 +1,6 @@
 # SpringBootService
 this is Spring Boot Service Project skeleton template.Include redis,rabbitmq,jersey restful,timing ,mybatis.The structure of the easy expansion, easy maintenance </br>
-这是一个spring boot微服务的框架，包括redis，mq，restful，定时器，mybabit。易扩容、易维护的架构。</br>
+这是一个spring boot微服务的框架，包括redis，mq，restful，定时器，mybatis。易扩容、易维护的架构。</br>
 
 # 项目说明
 * 该项目使用maven进行管理,可直接在maven projects下Plugins的spring-boot中运行.切记勿忘数据库的配置。 </br>
@@ -11,7 +11,7 @@ this is Spring Boot Service Project skeleton template.Include redis,rabbitmq,jer
 2.逻辑服务层：对远程调用作逻辑处理。</br>
 3.redis：缓存系统，3.0以上版本可配置集群。</br>
 4.rabbitmq：消息中间件（如果不喜欢这个MQ，可替换，不改变框架）。</br>
-5.mybabit && mysql：数据库，可配置集群</br>
+5.mybatis && mysql：数据库，可配置集群</br>
 
 # 如何做到快速开发呢？
 举例说明：</br>一个网上购物购物系统，可以把各个功能模块拆分如下：</br>
