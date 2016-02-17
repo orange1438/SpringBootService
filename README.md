@@ -1,6 +1,9 @@
 # SpringBootService
-this is Spring Boot Service Project skeleton template.Include redis,rabbitmq,jersey restful,timing ,mybatis.The structure of the easy expansion, easy maintenance </br>
+        this is Spring Boot Service Project skeleton template.Include redis,rabbitmq,jersey restful,timing ,mybatis.The structure of the easy expansion, easy maintenance </br>
 这是一个spring boot服务的框架，包括redis，mq，restful，定时器，mybabit。易扩容、易维护的架构。</br>
+
+# 项目说明
+* 该项目使用maven进行管理,可直接在maven projects下Plugins的spring-boot中运行.切记勿忘数据库的配置。 </br>
 
 # 快速开发的服务模版说明
 ![](https://raw.githubusercontent.com/orange1438/SpringBootService/master/Frame.jpg) </br>
