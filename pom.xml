@@ -30,7 +30,6 @@
 
     </dependencies>
 
-
     <build>
         <plugins>
 
@@ -42,18 +41,6 @@
                     <target>1.7</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
-            </plugin>
-
-            <plugin>
-                <artifactId>maven-source-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
 
         </plugins>
