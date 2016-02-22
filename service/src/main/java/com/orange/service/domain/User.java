@@ -16,6 +16,7 @@ import java.io.Serializable;
  * 2.关于序列化传输，可以使用protobuffer来自动生成类，可快速序列化等，跨语言支持C++、python、java
  */
 //如果需要把实体类序列化话，加上@XmlRootElement注解
+// 如果需要知道如果自动生成实体类，请参考我的另外的项目：https://github.com/orange1438/MybatisReverse
 @XmlRootElement
 public class User implements Serializable{
 
